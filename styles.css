@@ -1,6 +1,11 @@
 body{
     background-color: #0a0c47;
-    color: white}
+    color: white
+}
+
+p{
+    font-size: 1.5em;
+}
 
 a{
     color: yellow;
@@ -8,4 +13,9 @@ a{
 
 a:visited{
     color: red;
+}
+
+#content{
+    margin-left: 4em;
+    margin-top: 4em;
 }
