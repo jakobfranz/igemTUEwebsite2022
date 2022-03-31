@@ -1,19 +1,31 @@
 import { renderFile } from 'pug';
-import { access, unlink, watch, writeFile, readFileSync } from 'fs';
+import { access, unlink, watch, writeFile, readFileSync, readdirSync } from 'fs';
 
 const variables = JSON.parse(readFileSync('./variables.json'));
+const pugFolder = '../pug/';
+
+
+var files = readdirSync(pugFolder);
+// This array contains the files, that are currently accessed,
+// to prevent multiple writes on the same file
+var writing = [];
+
 
 
 var timeout = false;
 
-watch('../pug/', (event, filename) => {
+
+// Compile all files upon loading
+compileAll();
+
+// watch-cycle: Whenever a pug file is changed, compile it.
+watch(pugFolder, (event, filename) => {
     // Prevent multiple rapid calls    
-    if (timeout) {
+    if (writing.indexOf(filename) > -1) {
             return false;
-        } else {
-            timeout = true;
-            setTimeout(() => {timeout = false}, 200);
         }
+        
+        writing.push(filename);
 
         if (filename) {
             if (event = 'change') {
@@ -21,21 +33,23 @@ watch('../pug/', (event, filename) => {
                 compile(filename);
             } else if (event = 'rename') {
                 // file was created, deleted or renamed
-                access('../pug' + filename, constants.F_OK,
+                access(pugFolder + filename, constants.F_OK,
                     (err) => {
                         if (err) {
-                            // File was deleted -> delete respective html file
+                            // File was deleted -> delete respective html file, delete from file list
                             unlink(htmlFilePath(filename), 
                                 (err) => {
                                     if (err) {
-                                        console.log("Deletion Failed");
+                                        console.log("Deletion Failed: " + err);
                                     } else {
                                         console.log("File deleted");
+                                        files.splice(files.indexOf(filename),1);
                                     }
                                 });
                         } else {
-                            // File was renamed or created -> compile new file
+                            // File was renamed or created -> compile new file, add file to file list
                             compile(filename);
+                            files.push(filename);
                         }
                     });
             } else {
@@ -63,7 +77,7 @@ function compile(filename) {
 
         try {
             // compile and render pug file
-            var compiledFile = renderFile('../pug/' + filename, variables);
+            var compiledFile = renderFile(pugFolder + filename, variables);
 
             // Write into file
             writeFile(htmlFilePath(filename),
@@ -74,6 +88,8 @@ function compile(filename) {
                     } else {
                         console.log('Compiling successfull');
                     }
+                    // Removing writing prohibition for file
+                    writing.splice(writing.indexOf(filename),1);
                 });
         } catch (err) {
             console.log(err);
@@ -83,6 +99,16 @@ function compile(filename) {
         console.log('Compiler: No filename provided');
     }
 }
+
+
+function compileAll() {
+    /**
+     * Compiles all pug files
+     */
+    console.log("Compiling all files");
+    files.forEach((file) => compile(file));
+}
+
 
 
 function htmlFilePath(filename) {
