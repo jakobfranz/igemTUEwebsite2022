@@ -1,0 +1,48 @@
+body {
+    background-image: radial-gradient(circle at top right, #35E474, #2F4858 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Dubai', 'Calibri', sans-serif;
+}
+
+
+.header {
+    background-color:#2F4858;
+    width: 100vw;
+    max-width: 100vw;
+    box-shadow: 0 1px darkgrey;
+    border-radius: 0 0 25px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    background-color: white;
+    margin: auto;
+    width: 70vw;
+    min-width: 500px;
+    padding: 1px 30px 20px 30px;
+}
+
+
+h1 {
+    color: blue;
+    padding: initial;
+}
+
+p  {
+    padding: initial;
+}
+
+.header img{
+    max-width:20%;
+    width: 80px;
+    position: relative;
+}
+
+.header h1{
+    position: relative;
+    left:auto;
+}
