@@ -1,9 +1,11 @@
 body {
-    background-image: radial-gradient(circle at top right, #35E474, #2F4858 70%);
+    background-image: radial-gradient(circle at bottom right, #35E474, #2F4858 40%);
+    /*background-color: #2F4858;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Dubai', 'Calibri', sans-serif;
+    color: white;
 }
 
 
@@ -19,7 +21,7 @@ body {
 }
 
 .content {
-    background-color: white;
+    /*background-color: white;*/
     margin: auto;
     width: 70vw;
     min-width: 500px;
@@ -28,7 +30,7 @@ body {
 
 
 h1 {
-    color: blue;
+    /*color: blue;*/
     padding: initial;
 }
 

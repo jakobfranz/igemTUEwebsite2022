@@ -117,7 +117,7 @@ function htmlFilePath(filename) {
      */
 
     if (filename.slice(filename.length - 4, filename.length) === '.pug') {
-        return './html/' + filename.slice(0, filename.length - 3) + 'html';
+        return './docs/' + filename.slice(0, filename.length - 3) + 'html';
     } else {
         throw new Error("Given file was no pug file");
     }
