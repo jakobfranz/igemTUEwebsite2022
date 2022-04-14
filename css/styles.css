@@ -69,7 +69,6 @@ ul{
     list-style: none;
 }
 .footer{
-
   position: fixed;
   left: 0;
   bottom: 0;
@@ -77,7 +76,6 @@ ul{
     height: 10rem; 
     background-color: #24262b;
     padding: 20px;
-
 }
 .footer-col{
    width: 25%;
@@ -146,28 +144,4 @@ ul{
   .footer-col{
     width: 100%;
 }
-}
-
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
 }
