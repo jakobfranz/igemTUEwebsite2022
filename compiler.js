@@ -116,12 +116,8 @@ function htmlFilePath(filename) {
      * Converts a pug file name into the corresponding html file path
      */
 
-    if(filename === 'index.pug') {
-        return './index.html';
-    }
-
     if (filename.slice(filename.length - 4, filename.length) === '.pug') {
-        return './site/' + filename.slice(0, filename.length - 3) + 'html';
+        return './docs/' + filename.slice(0, filename.length - 3) + 'html';
     } else {
         throw new Error("Given file was no pug file");
     }

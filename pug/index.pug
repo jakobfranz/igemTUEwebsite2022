@@ -3,27 +3,28 @@ html
     head 
         meta(charset='utf-8')
         title iGEM Tübingen 
-        link(rel="stylesheet" href="./css/styles.css")
-        link(rel="shortcut icon" href="./img/Logo_circular_square.png" type="image/png")
+        link(rel="stylesheet" href="../css/styles.css")
+        link(rel="shortcut icon" href="../img/Logo_circular_square.png" type="image/png")
         link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
          
-        script(src="./js/script.js")
+        script(src="../js/scripts.js")
     
     body 
-        //.header 
-            img.logo(src="../img/Logo_circular_square.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
-            h1 iGEM Tübingen 2022
+        .navbar.sticky#navbar
+            nav
+                ul.nav.flex 
+                    li
+                        img.logo#navbar-logo(src="../img/Logo_regular.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
+                    li
+                        a.nav(href="#about-igem") iGEM 
+                    li
+                        a.nav(href="#igem-tuebingen") iGEM Tübingen
+                    li 
+                        a.nav(href="#our-project") Project
 
 
-        .content
-            h1 iGEM 2022
-
-            br
-            br
-
-            h2 iGEM
-
-            br
+        .content#content
+            h2#about-igem iGEM
 
             p.
                 iGEM (International Genetically Engineered Machine) is an annual international competition in Synthetic Biology 
@@ -32,21 +33,15 @@ html
                 the iGEM competition engages its participants to think out-of-the-box and go beyond their current knowledge. 
                 On top of that, the project shall integrate the entire society to make them part of it through human practices and community reach, 
                 being that the industry or the general public.
-
-            br
-
             p.
                 Since its inception, iGEM has transitioned from a curious challenge between MIT students to a global phenomenon 
                 driving the careers of new scientists, leaders, policymakers, and start-ups in the field of Synthetic Biology. 
                 As of 2022, more than 70.000 students have taken part in it, thus reaching up to 46 countries. 
                 In these times of globalization, iGEM is an example for cooperation, encouraging collaborations between teams worldwide every year.  
 
-            br
-            br
 
-            h2 iGEM Tuebingen: 
+            h2#igem-tuebingen iGEM Tuebingen: 
 
-            br
 
             p.
                 For this one-of-its-kind competition, the iGEM team Tübingen represents the University of Tübingen values and mission 
@@ -54,29 +49,21 @@ html
                 This professional attitude will stand in multiple occasions during public events on an international scale, 
                 but also in our internal organization and private communications with external associations. 
 
-            br
-
             p.
                 The iGEM Giant Jamboree congress will be the closure for this year’s competition in Paris on the 20-23rd of October, 
                 the first global in-person event since the pandemic broke out, allowing us to showcase our project and meeting participants 
                 from around the world. 
 
-            br
-
             p.
                 This year’s Team Tübingen will continue to be a standard-bearer for its success since 2013, 
                 being awarded several medals over this period.
 
-            br
-            br
 
-            h2 Project: Anatoxin A E. coli Biosensor 
+            h2#our-project Project: Anatoxin A E. coli Biosensor 
 
-            br
 
             h3 The Problem: 
 
-            br
 
             p.
                 In algae contaminated freshwater there is often an occurrence of cyanobacteria. During Harmful Algal Blooms (HABs), 
@@ -87,11 +74,9 @@ html
                 Since these receptors are found in (mammal) muscle-cells, Anatoxin A leads to overstimulation of muscles, 
                 which then can cause respiratory failure and death. 
 
-            br
 
             h3 Our Idea:  
 
-            br
 
             p.
                 To create a biosensor for Anatoxin A with a two-component-system (TCS) in E. coli. 
@@ -101,56 +86,46 @@ html
 
             br
 
-            p  
-                b 1. The histidine-kinase: 
+            ol  
+                li
+                    b The histidine-kinase: 
+                    p.
+                        This protein is auto phosphorylated by the signal, which in our project will be Anatoxin A. 
+                        Then, the signal is recognised by nAChr or as an alternative by the chemotaxis receptor PctD, which fits structurally better with a TCS. 
+                        Both receptors have already been expressed in E. coli (Zitat: AchBP expression in Ecoli) (Zitat: PseudomonasAcetylcholine). 
 
-            p.
-                This protein is auto phosphorylated by the signal, which in our project will be Anatoxin A. 
-                Then, the signal is recognised by nAChr or as an alternative by the chemotaxis receptor PctD, which fits structurally better with a TCS. 
-                Both receptors have already been expressed in E. coli (Zitat: AchBP expression in Ecoli) (Zitat: PseudomonasAcetylcholine). 
-
-            br
-
-            p  
-                b 2. The response regulator (RR): 
-
-            p.
-                The regulators effector-domain is activated by phosphoryl transfer from the histidine-kinase. 
-                This causes specific promoter regions to be activated and the expression of a gene, in our case GFP.  
-
-            br
-
-            p 
-                b 3. GFP (Green Fluorescent Protein): 
-
-            p.
-                GFP is a gene which was first identified in the jellyfish species Aequorea victoria. Since its discovery, 
-                GFP has served as a marker for other protein in cells. This can give information about the proteins that are in the cell. 
-                In our case there will be proteins expressed by the two-component-system, that interact with GFP and let it shine green. 
-                So, in our project we will have to find a way that a receptor (nAChr or PctD) that recognises Anatoxin A is inserted in the 
-                Two-Component-System, more specifically within the histidine-kinase, so that it expresses the GFP gene when Anatoxin A is present. 
+                li
+                    b The response regulator (RR): 
+                    p.
+                        The regulators effector-domain is activated by phosphoryl transfer from the histidine-kinase. 
+                        This causes specific promoter regions to be activated and the expression of a gene, in our case GFP.  
+                li 
+                    b GFP (Green Fluorescent Protein): 
+                    p.
+                        GFP is a gene which was first identified in the jellyfish species Aequorea victoria. Since its discovery, 
+                        GFP has served as a marker for other protein in cells. This can give information about the proteins that are in the cell. 
+                        In our case there will be proteins expressed by the two-component-system, that interact with GFP and let it shine green. 
+                        So, in our project we will have to find a way that a receptor (nAChr or PctD) that recognises Anatoxin A is inserted in the 
+                        Two-Component-System, more specifically within the histidine-kinase, so that it expresses the GFP gene when Anatoxin A is present. 
 
             p(style='margin-bottom:11rem;')
 
-            footer.footer
-                .container
-                    .row
-                        .footer-col
-                            h4 Contact:
-                            ul
-                                li
-                                    a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
-                        .footer-col
-                            h4 follow us
-                            .social-links
-                                a(href='https://www.facebook.com/igemtuebingen/')
-                                    i.fab.fa-facebook-f
-                                a(href='https://twitter.com/igemtuebingen?lang=de')
-                                    i.fab.fa-twitter
-                                a(href='https://www.instagram.com/igem_tuebingen/')
-                                    i.fab.fa-instagram
-                                a(href='#')
-                                    i.fab.fa-youtube
-
-            
-    </div>
+        footer.footer
+            .container
+                .row
+                    .footer-col
+                        h4 Contact:
+                        ul
+                            li
+                                a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
+                    .footer-col
+                        h4 follow us
+                        .social-links
+                            a(href='https://www.facebook.com/igemtuebingen/')
+                                i.fab.fa-facebook-f
+                            a(href='https://twitter.com/igemtuebingen?lang=de')
+                                i.fab.fa-twitter
+                            a(href='https://www.instagram.com/igem_tuebingen/')
+                                i.fab.fa-instagram
+                            a(href='#')
+                                i.fab.fa-youtube
