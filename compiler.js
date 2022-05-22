@@ -86,7 +86,7 @@ function compile(filename) {
                     if (err) {
                         console.log('Unable to write into file: ' + err);
                     } else {
-                        console.log('Compiling successfull');
+                        console.log('Compiling of ' + filename + ' successfull');
                     }
                     // Removing writing prohibition for file
                     writing.splice(writing.indexOf(filename),1);
@@ -119,6 +119,6 @@ function htmlFilePath(filename) {
     if (filename.slice(filename.length - 4, filename.length) === '.pug') {
         return './docs/' + filename.slice(0, filename.length - 3) + 'html';
     } else {
-        throw new Error("Given file was no pug file");
+        throw new Error("Given file was no pug file: " + filename);
     }
 }
