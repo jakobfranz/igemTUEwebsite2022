@@ -15,6 +15,7 @@ function scrollFunction() {
 // Things to do when window has loaded
 window.onload = function() {
   // offset document by navbar height
-  document.getElementById("content").style.marginTop = `${document.getElementById("navbar").clientHeight + 50}px`;
+  document.getElementById("content").style.marginTop = `${document.getElementById("navbar").clientHeight}px`;
 }
+
 
