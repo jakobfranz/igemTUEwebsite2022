@@ -48,6 +48,14 @@ p  {
     padding: initial;
 }
 
+a{
+    color: yellow;
+}
+
+a:visited{
+    color: red;
+}
+
 .header img{
     max-width:20%;
     width: 80px;

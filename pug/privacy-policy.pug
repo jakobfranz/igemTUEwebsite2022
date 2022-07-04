@@ -1,0 +1,73 @@
+doctype html
+html 
+    head 
+        meta(charset='utf-8')
+        title iGEM Tübingen 
+        link(rel="stylesheet" href="./css/styles.css")
+        link(rel="shortcut icon" href="./img/Logo_circular_square.png" type="image/png")
+        //link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+         
+        script(src="./js/scripts.js")
+    
+    body 
+        .navbar.sticky#navbar
+            nav
+                ul.nav.flex 
+                    li
+                        a(href="index.html")
+                            img.logo#navbar-logo(src="./img/Logo_regular.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
+                    li
+                        a.nav(href="#owner") iGEM Tuebingen
+                    li
+                        a.nav(href="#host") GitHub
+                    li
+                        a.nav(href="#contact") Kontakt
+
+
+        .content#content
+            h1 Privacy Policy
+
+            h2 Website owner: iGEM Tuebingen
+                .anchor#owner
+            
+            p iGEM Tuebingen does not collect any user data.
+
+            h2 Website hoster: GitHub
+                .anchor#host
+
+            p 
+                | This webiste is hosted by GitHub via the GitHub Pages service. GitHub saves acces logs, this may include among others 
+                | the users IP adress, the pages you view, information about your device, session information and time and date of each 
+                | request. This data is not accessable by the website owner.
+                | For more information read GitHubs 
+                a(href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement") Privacy Policy 
+                | and 
+                a(href="https://github.com/customer-terms/github-data-protection-agreement") Data Protection Agreement (pdf)
+                | .
+
+
+            
+
+            p(style='margin-bottom:11rem;')
+
+        footer.footer
+            .container
+                .row
+                    .footer-col
+                        h4 Contact:
+                        ul
+                            li
+                                a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
+                            li
+                                a(href='/privacy-policy.html') Privacy Policy
+                    .footer-col
+                        h4 follow us
+                        .social-links
+                            a(href='https://www.facebook.com/igemtuebingen/')
+                                i.fab.fa-facebook-f
+                            a(href='https://twitter.com/igemtuebingen?lang=de')
+                                i.fab.fa-twitter
+                            a(href='https://www.instagram.com/igem_tuebingen/')
+                                i.fab.fa-instagram
+                            //a(href='#')
+                                i.fab.fa-youtube
