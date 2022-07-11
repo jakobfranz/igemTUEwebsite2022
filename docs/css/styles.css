@@ -10,7 +10,7 @@ body {
     background-image: radial-gradient(circle at bottom right, #35E474, #2F4858 40%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 80vh;
     font-family: 'Dubai', 'Calibri', sans-serif;
     font-size: 1.2em;
     color: white;
@@ -25,11 +25,12 @@ body {
 
 .content {
     /*background-color: white;*/
-    margin: auto;
+    position: relative;
+    top: 50px;
     margin-top: 30px;
     width: 70vw;
     min-width: 500px;
-    padding: 1px 30px 20px 30px;
+    padding: 1px 30px 20px 40px;
 }
 
 
@@ -79,8 +80,17 @@ a:visited{
 ul{
     list-style: none;
 }
+
+ul.links{
+    margin-top: -9px;
+}
+
+li{
+    margin-top: inherit;
+}
+
 .footer{
-  /*position: fixed;*/
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -184,6 +194,7 @@ ul{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     /*border-radius: 0 0 10px 10px;*/
 }
 
