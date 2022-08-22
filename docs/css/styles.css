@@ -172,9 +172,10 @@ li{
     text-decoration: none;
     list-style-type: none;
     padding: 9px;
-    font-size: 2em;
+    font-size: 3em;
     color: white;
     vertical-align: bottom;
+    transition: 0.4s;
 }
 
 .nav img{
@@ -187,7 +188,8 @@ li{
 }
 
 .navbar {
-    background-color:#35E474;
+    /*background-color:#1ad24b;*/
+    background-image: radial-gradient(circle at bottom right, #3c7280, #35E474 85%);;
     width: 100vw;
     max-width: 100vw;
     box-shadow: 0 10px white;

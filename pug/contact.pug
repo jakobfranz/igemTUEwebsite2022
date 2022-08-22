@@ -3,57 +3,54 @@ html
     head 
         meta(charset='utf-8')
         title iGEM Tübingen 
-        link(rel="stylesheet" href="./css/styles.css")
+        link(rel="stylesheet" href="./css/positioning.css")
+        link(rel="stylesheet" href="./css/navbar.css")
+        link(rel="stylesheet" href="./css/content.css")
+        link(rel="stylesheet" href="./css/footer.css")
         link(rel="shortcut icon" href="./img/Logo_circular_square.png" type="image/png")
-        //link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
-         
-        script(src="./js/scripts.js")
+        script(src="./js/navbar-scroll.js")
     
-    body 
-        .navbar.sticky#navbar
+    body#body
+        #navbar.big
             nav
-                ul.nav.flex 
-                    li
+                ul.nav
+                    li.logo-li
                         a(href="index.html")
-                            img.logo#navbar-logo(src="./img/Logo_regular.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
-                    li
-                        a.nav(href="#owner") Contact Information
+                            img.logo#navbar-logo(src="./img/Logo_white.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
+                    .menu
+                        li
+                            a.navlink(href="#contact") Contact Information
 
 
-        .content#content
-            h1 Contact Information
+        .content
+            .text
+                .anchor#contact
+                h1 Contact Information
 
-            p This website is owned by the iGEM team Tübingen.
+                p This website is owned by the iGEM team Tübingen.
 
-            p iGEM Tübingen<br>Auf der Morgenstelle 28<br>72076 Tübingen<br>Germany 
-            p 
-                a(href="mailto:team@igem-tuebingen.de") team@igem-tuebingen.de
+                p iGEM Tübingen<br>Auf der Morgenstelle 28<br>72076 Tübingen<br>Germany 
+                p 
+                    a(href="mailto:team@igem-tuebingen.de") team@igem-tuebingen.de
 
-
-            
-
-            p(style='margin-bottom:11rem;')
+            .side
 
         footer.footer
-            .container
-                .row
-                    .footer-col
-                        h4 Contact:
-                        ul.links
-                            li
-                                a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
-                            li
-                                a(href='privacy-policy.html') Privacy Policy
-                            li 
-                                a(href='contact.html') Contact
-                    .footer-col
-                        h4 follow us
-                        .social-links
-                            a(href='https://www.facebook.com/igemtuebingen/')
-                                i.fab.fa-facebook-f
-                            a(href='https://twitter.com/igemtuebingen?lang=de')
-                                i.fab.fa-twitter
-                            a(href='https://www.instagram.com/igem_tuebingen/')
-                                i.fab.fa-instagram
-                            //a(href='#')
-                                i.fab.fa-youtube
+            .links
+                h4 Important links:
+                ul
+                    li
+                        a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
+                    li
+                        a(href='privacy-policy.html') Privacy Policy
+                    li 
+                        a(href='contact.html') Contact
+            .social-links       
+                h4 Follow us
+                br
+                a(href='https://www.facebook.com/igemtuebingen/')
+                    img(src="./img/facebook.svg", alt="Facebook")
+                a(href='https://twitter.com/igemtuebingen')
+                    img(src="./img/twitter.svg", alt="Twitter")
+                a(href='https://www.instagram.com/igem_tuebingen/')
+                    img(src="./img/instagram.svg", alt="Instagram")

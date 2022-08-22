@@ -1,0 +1,73 @@
+.nav {
+    list-style: none;
+    font-size: 1em;
+    width: 100vw;
+}
+
+ul.nav {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu {
+    display: flex;
+    flex: auto;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    display: grid;
+    place-items: center;
+    font-size: inherit;
+    padding: 10px;
+}
+
+.menu li a{
+    display: block;
+    margin: auto;
+    color: white;
+    transition: 0.4s;
+    font-family: 'Dubai', 'Calibri', sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    line-height: 78%;
+}
+
+#navbar-logo{
+    transition: 0.4s;
+    vertical-align: middle;
+}
+
+.logo-li{
+    display: grid;
+    place-items: top;
+}
+
+.big #navbar-logo{
+    width: 200px;
+}
+
+.big a{
+    font-size: 3em;
+}
+
+.small #navbar-logo{
+    width: 120px;
+}
+
+.small a {
+    font-size: 2em;
+}
+
+.small .menu li a:hover{
+    font-size: 2.3em;
+    transition: 0.2s;
+}
+
+.big .menu li a:hover{
+    font-size: 3.5em;
+    transition: 0.2s;
+}

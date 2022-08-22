@@ -4,8 +4,14 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar-logo").style.width = "100px";
+    for (const element of document.getElementsByClassName("navlink")) {
+      element.style.fontSize = "2em";
+    }
   } else {
     document.getElementById("navbar-logo").style.width = "200px";
+    for (const element of document.getElementsByClassName("navlink")) {
+      element.style.fontSize = "3em";
+    }
   }
 } 
 

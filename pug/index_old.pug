@@ -1,0 +1,112 @@
+doctype html
+html 
+    head 
+        meta(charset='utf-8')
+        title iGEM Tübingen 
+        link(rel="stylesheet" href="./css/styles.css")
+        link(rel="shortcut icon" href="./img/Logo_circular_square.png" type="image/png")
+        //link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+         
+        script(src="./js/scripts.js")
+    
+    body 
+        .navbar.sticky#navbar
+            nav
+                ul.nav.flex 
+                    li
+                        a(href="#")
+                            img.logo#navbar-logo(src="./img/Logo_white.png" type="image/png" alt="Logo of iGEM Tuebingen 2022")
+                    li
+                        a.nav.navlink(href="#about-igem") iGEM 
+                    li
+                        a.nav.navlink(href="#igem-tuebingen") iGEM Tübingen
+                    li 
+                        a.nav.navlink(href="#our-project") Project
+
+
+        .content#content
+            h2 iGEM
+                .anchor#about-igem
+
+            p.
+                iGEM (International Genetically Engineered Machine) is an annual international competition in Synthetic Biology 
+                founded by the Massachusetts Institute of Technology in 2003. 
+                Fostering new and interdisciplinary approaches to solving local and global problems through Synthetic Biology, 
+                the iGEM competition engages its participants to think out-of-the-box and go beyond their current knowledge. 
+                On top of that, the project shall integrate the entire society to make them part of it through human practices and community reach, 
+                being that the industry or the general public.
+            p.
+                Since its inception, iGEM has transitioned from a curious challenge between MIT students to a global phenomenon 
+                driving the careers of new scientists, leaders, policymakers, and start-ups in the field of Synthetic Biology. 
+                As of 2022, more than 70.000 students have taken part in it, thus reaching up to 46 countries. 
+                In these times of globalization, iGEM is an example for cooperation, encouraging collaborations between teams worldwide every year.  
+
+
+            h2 iGEM Tuebingen: 
+                .anchor#igem-tuebingen
+
+
+            p.
+                The iGEM team Tübingen is composed by students from the University of Tübingen. We aim
+                towards excellence and social responsibility. 
+                This professional attitude will stand in multiple occasions during public events on an international scale, 
+                but also in our internal organization and private communications with external associations. 
+
+            p.
+                The iGEM Giant Jamboree congress will be the closure for this year’s competition in Paris on the 20-23rd of October, 
+                the first global in-person event since the pandemic broke out, allowing us to showcase our project and meeting participants 
+                from around the world. 
+
+            p.
+                This year’s Team Tübingen will continue to be a standard-bearer for its success since 2013, 
+                being awarded several medals over this period.
+
+
+            h2 Project: Anatoxin A E. coli Biosensor 
+                .anchor#our-project
+
+            h3 The Problem: 
+
+
+            p.
+                In algae contaminated freshwater there is often an occurrence of cyanobacteria. During Harmful Algal Blooms (HABs), 
+                these produce toxins in high concentrations, consequently threatening wildlife. 
+                Anatoxin A is a cyanotoxin which can be produced by many cyanobacteria species, such as Anabaena. 
+                Its Method of Action is that it activates by binding irreversibly to the nicotinic acetylcholine receptor (nAChR) ion channels, 
+                therefore leaving them open indefinitely. 
+                Since these receptors are found in (mammal) muscle-cells, Anatoxin A leads to overstimulation of muscles, 
+                which then can cause respiratory failure and death. 
+
+
+            h3 Our Idea:  
+
+
+            p We want to create a functionable and practical Biosensor for Anatoxin A in 
+                i E. coli.  
+
+
+            p(style='margin-bottom:11rem;')
+
+        footer.footer
+            .container
+                .row
+                    .footer-col
+                        h4 Contact:
+                        ul.links
+                            li
+                                a(href='mailto:team@igem-tuebingen.de ') team@igem-tuebingen.de 
+                            li
+                                a(href='privacy-policy.html') Privacy Policy
+                            li 
+                                a(href='contact.html') Contact
+                    .footer-col
+                        h4 follow us
+                        .social-links
+                            a(href='https://www.facebook.com/igemtuebingen/')
+                                i.fab.fa-facebook-f
+                            a(href='https://twitter.com/igemtuebingen?lang=de')
+                                i.fab.fa-twitter
+                            a(href='https://www.instagram.com/igem_tuebingen/')
+                                i.fab.fa-instagram
+                            //a(href='#')
+                                i.fab.fa-youtube
